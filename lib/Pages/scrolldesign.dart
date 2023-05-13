@@ -10,16 +10,16 @@ class Scrolldesign extends StatelessWidget {
   Container buildCropBox(BuildContext context) {
     return Container(
       height: MediaQuery.of(context).size.height * 0.15,
-      width: MediaQuery.of(context).size.width * 0.25,
+      width: MediaQuery.of(context).size.width * 0.28,
       decoration: BoxDecoration(
-        color: Colors.grey,
+        color: Color(0xFFECECEC),
         borderRadius: BorderRadius.circular(10),
       ),
       child: Column(
         children: [
           Container(
             height: MediaQuery.of(context).size.height * 0.12,
-            width: MediaQuery.of(context).size.width * 0.1,
+            width: MediaQuery.of(context).size.width * 0.15,
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage("assets/images/leaf2.png"),
@@ -42,117 +42,123 @@ class Scrolldesign extends StatelessWidget {
       height: MediaQuery
           .of(context)
           .size
-          .height * 0.67,
+          .height * 0.72,
       color: Colors.white,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Container(
-            child: Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: CircleAvatar(
-                    radius: 20,
-                    backgroundImage: AssetImage(profile),
-                  ),
-                ),
-                SizedBox(width: 10),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      name,
-                      style: TextStyle(fontWeight: FontWeight.bold),
+      child: Container(
+        height: MediaQuery
+            .of(context)
+            .size
+            .height * 0.70,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              child: Row(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: CircleAvatar(
+                      radius: 20,
+                      backgroundImage: AssetImage(profile),
                     ),
-                    Text(email)
-                  ],
-                ),
-                Spacer(),
-                Icon(Icons.more_horiz)
-              ],
-            ),
-          ),
-          Container(
-            height: MediaQuery
-                .of(context)
-                .size
-                .height * 0.35,
-            width: double.infinity,
-            child: Image.asset(
-              image,
-              fit: BoxFit.fill,
-
-            ),
-          ),
-          SizedBox(height: 8),
-          Row(
-            children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Icon(Icons.favorite_border_outlined),
+                  ),
+                  SizedBox(width: 10),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        name,
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      Text(email)
+                    ],
+                  ),
+                  Spacer(),
+                  Icon(Icons.more_vert)
+                ],
               ),
-              Text("110"),
-              Padding(
-                padding: const EdgeInsets.only(left: 15, right: 8),
-                child: Icon(Icons.messenger_outline),
-              ),
-              Text("32"),
-              Spacer(),
-              Padding(
-                padding: const EdgeInsets.only(bottom: 5, right: 8),
-                child: Icon(Icons.bookmark_border),
-              )
-            ],
-          ),
-          SizedBox(height: 8),
-          Container(
-            height: 1.5,
-            width: double.infinity,
-            color: Color(0xFFDEFABB),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(name,
-              style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 18
-              ),),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text("Agrichikitsa is best solutin for agricultural Needs.",
-              style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.normal,
-                  fontSize: 16
-              ),),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: SizedBox(
+            ),
+            Container(
               height: MediaQuery
                   .of(context)
                   .size
-                  .height * 0.05,
-              child: TextField(
-                decoration: InputDecoration(
-                  hintText: "Write a comment",
-                  filled: true,
-                  fillColor: Colors.grey[200],
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(18),
-                    borderSide: BorderSide.none,
+                  .height * 0.35,
+              width: double.infinity,
+              child: Image.asset(
+                image,
+                fit: BoxFit.fill,
+
+              ),
+            ),
+            SizedBox(height: 8),
+            Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Icon(Icons.favorite_border_outlined),
+                ),
+                Text("110"),
+                Padding(
+                  padding: const EdgeInsets.only(left: 15, right: 8),
+                  child: Icon(Icons.messenger_outline),
+                ),
+                Text("32"),
+                Spacer(),
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 5, right: 8),
+                  child: Icon(Icons.bookmark_border),
+                )
+              ],
+            ),
+            SizedBox(height: 8),
+            Container(
+              height: 1,
+              width: double.infinity,
+              color: Color(0xFFDEFABB),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(name,
+                style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18
+                ),),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text("Agrichikitsa is best solutin for agricultural Needs.",
+                style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.normal,
+                    fontSize: 16
+                ),),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SizedBox(
+                height: MediaQuery
+                    .of(context)
+                    .size
+                    .height * 0.05,
+                child: TextField(
+                  decoration: InputDecoration(
+                    hintText: "Write a comment",
+                    filled: true,
+                    fillColor: Colors.grey[200],
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(18),
+                      borderSide: BorderSide.none,
+                    ),
+                    contentPadding: EdgeInsets.symmetric(
+                        horizontal: 10, vertical: 8),
                   ),
-                  contentPadding: EdgeInsets.symmetric(
-                      horizontal: 10, vertical: 8),
                 ),
               ),
             ),
-          ),
-          SizedBox(height: 8),
-        ],
+            SizedBox(height: 8),
+          ],
+        ),
       ),
     );
   }
@@ -208,7 +214,8 @@ class Scrolldesign extends StatelessWidget {
                           width: MediaQuery.of(context).size.width * 0.18,
                           height: MediaQuery.of(context).size.height * 0.040,
                           decoration: BoxDecoration(
-                              color: Colors.green,
+                              color: Color(0xff048138),
+
                               borderRadius: BorderRadius.circular(12)),
                           child: Center(
                             child: Text(
@@ -291,18 +298,19 @@ class Scrolldesign extends StatelessWidget {
                         ),
                         Container(
                           height: MediaQuery.of(context).size.height * 0.15,
-                          width: MediaQuery.of(context).size.width * 0.25,
+                          width: MediaQuery.of(context).size.width * 0.28,
                           decoration: BoxDecoration(
-                            color: Colors.grey,
+                            color: Color(0xFFECECEC),
+
                             borderRadius: BorderRadius.circular(10),
                           ),
                           child: Column(
                             children: [
                               Container(
-                                height:
-                                    MediaQuery.of(context).size.height * 0.12,
-                                width: MediaQuery.of(context).size.width * 0.1,
+                                height: MediaQuery.of(context).size.height * 0.12,
+                                width: MediaQuery.of(context).size.width * 0.15,
                                 decoration: BoxDecoration(
+
                                   image: DecorationImage(
                                     image: AssetImage(
                                         "assets/images/blackleaf2.png"),
@@ -328,69 +336,73 @@ class Scrolldesign extends StatelessWidget {
           buidCropimage(context, "Ayush kumar", "@ayush", "assets/images/person.png", "assets/images/crop2.jpg"),
           SizedBox(height: 6),
           Container(
-            height: MediaQuery.of(context).size.height * 0.24,
+            height: MediaQuery.of(context).size.height * 0.28,
             width: double.infinity,
             color: Colors.white,
-            child: Column(
-              children: [
-                Padding(
-                  padding: EdgeInsets.all(8),
-                  child:Row(
+            child: Container(
+              height: MediaQuery.of(context).size.height * 0.26,
+              width: double.infinity,
+              child: Column(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.all(8),
+                    child:Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: CircleAvatar(
+                            radius: 20,
+                            backgroundImage: AssetImage("assets/images/logo.png"),
+                          ),
+                        ),
+                        SizedBox(width: 10),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Agrichikitsa",
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
+                            Text("@agc")
+                          ],
+                        ),
+                        Spacer(),
+                        Icon(Icons.more_vert)
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 6,),
+                  Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Text("On a first-time visit to New Orleans,there's so much to see and do",
+                    style: TextStyle(
+                      fontSize: 16
+                    ),),
+                  ),
+                  SizedBox(height: 6,),
+                  Row(
                     children: [
                       Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: CircleAvatar(
-                          radius: 20,
-                          backgroundImage: AssetImage("assets/images/logo.png"),
-                        ),
+                        child: Icon(Icons.favorite_border_outlined),
                       ),
-                      SizedBox(width: 10),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Agrichikitsa",
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                          Text("@agc")
-                        ],
+                      Text("110"),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 15,right:8),
+                        child: Icon(Icons.messenger_outline),
                       ),
+                      Text("32"),
                       Spacer(),
-                      Icon(Icons.more_vert)
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 5,right: 8),
+                        child: Icon(Icons.bookmark_border),
+                      )
                     ],
                   ),
-                ),
-                SizedBox(height: 6,),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Text("On a first-time visit to New Orleans,there's so much to see and do",
-                  style: TextStyle(
-                    fontSize: 16
-                  ),),
-                ),
-                SizedBox(height: 6,),
-                Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Icon(Icons.favorite_border_outlined),
-                    ),
-                    Text("110"),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 15,right:8),
-                      child: Icon(Icons.messenger_outline),
-                    ),
-                    Text("32"),
-                    Spacer(),
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 5,right: 8),
-                      child: Icon(Icons.bookmark_border),
-                    )
-                  ],
-                ),
-                SizedBox(height: 6,),
-              ],
+                  SizedBox(height: 6,),
+                ],
 
+              ),
             ),
           ),
           SizedBox(height: 6),
